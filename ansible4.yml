@@ -1,0 +1,10 @@
+7)REMOVE HOST FILE 
+---
+- name: update hosts file
+  hosts: koti
+  tasks:
+  - name: remove a line to a file if the file does not exist,  passing regexp
+    lineinfile:
+      path: /etc/hosts
+      line: 10.10.21.200        kotireddy
+      state: absent

@@ -1,0 +1,7 @@
+---
+ - name: fire below command
+   hosts: localhost
+   tasks:
+   - command: uname -r
+     register: kernel
+   - debug: var=kernel.stdout

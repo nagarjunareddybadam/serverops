@@ -1,0 +1,12 @@
+1)COPY A FILE
+---
+- name: copy file
+  hosts: koti
+  tasks:
+  - name: Copy file with owner and permissions
+    copy:
+      src: /var/log/messages
+      dest: /tmp/
+      owner: koti
+      group: reddy
+      mode: 0644

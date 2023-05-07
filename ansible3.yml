@@ -1,0 +1,9 @@
+2)REMOVE A FILE
+---
+- name: remove a file
+  hosts: koti
+  tasks:
+  - name: remove a  file
+    file:
+      path: /tmp/messages
+      state: absent

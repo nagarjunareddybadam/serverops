@@ -1,0 +1,10 @@
+5)CREATE DIR
+---
+- name: facts playbook
+  hosts: koti
+  tasks:
+  - name: create a directory if it does not exit
+    file:
+      path: /tmp/kotireddy
+      state: directory
+      mode: 0777
